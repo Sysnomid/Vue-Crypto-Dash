@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Ticker from '../views/Ticker.vue'
 import err from '../views/404.vue'
+import Crypto from '../views/Crypto.vue'
 
 Vue.use(VueRouter)
 
@@ -13,7 +14,12 @@ const routes = [
     component: Home
   },
   {
-    path: "/assets/:id",
+    path: '/crypto',
+    name: 'Crypto',
+    component: Crypto
+  },
+  {
+    path: "/crypto/assets/:id",
     name: 'Ticker',
     component: Ticker
   },

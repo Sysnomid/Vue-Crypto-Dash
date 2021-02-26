@@ -17,7 +17,6 @@ export default {
             ticker: ""
         }
     },
-
     async mounted() {
         const test = await axios.get(`https://data.messari.io/api/v1/assets/${this.id}/metrics`)
         .then(response => (response.data))
@@ -25,7 +24,6 @@ export default {
             console.log(error)
             this.$router.push('/err')
         });
-
         this.marketData = test.data.market_data.price_usd;
         this.ticker = test.data.name
     }
@@ -33,9 +31,7 @@ export default {
 </script>
 
 <style scoped>
-
 .green {
     color: #088c4a
 }
-
 </style>
