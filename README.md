@@ -1,4 +1,4 @@
-# crypto-dash
+# Vue Experiments
 
 ## Project setup
 ```
