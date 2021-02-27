@@ -93,15 +93,18 @@ export default {
 }
 
 .green {
-    color: #088c4a;
+    color: #5fc594;
 }
 .red {
-    color: #aa1616;
+    color: #c55f5f;
 }
 input {
     padding: 1em;
     margin: 1em;
-    font-size: 13px;
+    font-size: 15px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+    border: none;
 }
 button {
     padding: 1em;
