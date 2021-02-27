@@ -1,5 +1,8 @@
 <template>
-    <h1> Sysnomid Vue Experiments </h1>    
+    <div>
+    <h1> Sysnomid Vue Experiments </h1>   
+    <a href="/#/crypto"> Crypto </a>
+    </div> 
 </template>
 
 <script>
