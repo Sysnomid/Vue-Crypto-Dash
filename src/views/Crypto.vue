@@ -1,16 +1,17 @@
 <template>
-  <div class="home ">
+  <div class="home">
+    <router-view/>
     <img alt="Crypto" src="https://pngimg.com/uploads/bitcoin/bitcoin_PNG25.png" height="200" width="200"/>
     <h1>Crypto Dash</h1>
     <p>Enter a ticker</p>
     <form @submit="redirect">
       <input v-model="ticker" placeholder="BTC"> 
-      <vue-title title="Static Title"></vue-title>
       <button type="submit">Submit</button>
     </form>
     <hr width="40%" class="spaced"/>
     <br />
    <div class="spaced">
+     <h3>Coins</h3>
     <a href="/#/crypto/assets/BTC">BTC</a>
     <a href="/#/crypto/assets/ETH">ETH</a>
     <a href="/#/crypto/assets/ADA">ADA</a>
@@ -44,6 +45,6 @@ export default {
     flex-direction: column;
     grid-gap: 20px;
     font-size: 25px;
-    margin: 1em;
+    margin: 0.5em;
   }
 </style>

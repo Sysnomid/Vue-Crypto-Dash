@@ -1,17 +1,12 @@
 <template>
-  <div id="app">
+  <html id="app" class="darkmode">
     <div id="nav">
-      <router-link to="/">Home</router-link>
+      <a href="/#/crypto"></a>
     </div>
     <router-view/>
     <title>Sysnomid Vue Experiments</title>
-
     <br />
-    <br />
-    <hr />
-    <a href="https://sysnomid.com"> Website </a>
-    <br />
-  </div>
+  </html>
 </template>
 
 <style>
@@ -19,34 +14,32 @@
 @import url('https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css');
 
 html { 
-  font-family: 'Inter', sans-serif;
-  margin: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
   overflow-x: hidden;
-  color: #c5c5c5;
-  background-color: #282c35;
+  color: #c5c5c5; 
+  background-color: #282c35; 
+  font-family: 'Inter', sans-serif ;
 }
-
-
-  a {
-      color:  #c2c2c2;
-      text-decoration: underline;
-      text-decoration-color: rgb(100, 100, 100);
-  }
-  a:hover {
-      text-decoration: none;
-  }
-
+a {
+  color: #c5c5c5; 
+    text-decoration: underline;
+    text-decoration-color: rgb(100, 100, 100);
+}
+a:hover {
+    text-decoration: none;
+}
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 }
-
 #nav {
   margin: 0 auto;
    display: flex;
    flex-direction: row;
    grid-gap: 5px;
    gap: 5px;
-   
 }
-
 </style>
