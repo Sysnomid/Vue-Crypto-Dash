@@ -17,6 +17,7 @@
     <a href="/#/crypto/assets/DOT">DOT</a>
     <a href="/#/crypto/assets/LINK">LINK</a>
     <a href="/#/crypto/assets/XMR">XMR</a>
+    <a href="/#/crypto/assets/DOGE">DOGE</a>
   </div>
   </div>
 </template>
