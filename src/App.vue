@@ -17,8 +17,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4%;
-  margin-bottom: 4%;
+  padding: 4%;
   overflow-x: hidden;
   color: #c5c5c5; 
   background-color: #282c35; 

@@ -18,11 +18,13 @@
 
        <div v-if="!reverse">
             <input v-model="USD" type="number" @input="clean() + convert()">
+            <br />
             <button @click="reversemain" class="reversed"> <i class="fa fa-undo" aria-hidden="true"></i> </button>
             <input v-model="CryptoAmt" type="number" readonly>
         </div>
         <div v-if="reverse">
             <input v-model="CryptoAmt" type="number" @input="clean() + convert()">
+            <br />
             <button @click="reversemain" class="reversed"> <i class="fa fa-undo" aria-hidden="true"></i> </button>
             <input v-model="USD" type="number" readonly>
         </div>
