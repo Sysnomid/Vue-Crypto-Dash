@@ -2,11 +2,15 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link>
-      <a href="https://github.com/Sysnomid/vue-experiments">Github</a>
-      <a href="https://sysnomid.com">Website</a>
     </div>
     <router-view/>
     <title>Sysnomid Vue Experiments</title>
+
+    <br />
+    <br />
+    <hr />
+    <a href="https://sysnomid.com"> Website </a>
+    <br />
   </div>
 </template>
 
@@ -37,11 +41,12 @@ html {
 }
 
 #nav {
+  margin: 0 auto;
    display: flex;
    flex-direction: row;
    grid-gap: 5px;
-   padding-bottom: 20px;
-
+   gap: 5px;
+   
 }
 
 </style>
