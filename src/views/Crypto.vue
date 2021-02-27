@@ -4,7 +4,7 @@
     <h1> Crypto Dash </h1>
     <p>Enter a ticker</p>
     <form @submit="redirect">
-      <input v-model="ticker"> 
+      <input v-model="ticker" placeholder="BTC"> 
       <button type="submit">Submit</button>
     </form>
   </div>

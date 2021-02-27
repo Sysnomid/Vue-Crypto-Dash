@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link>
+      <title>Sysnomid Vue Experiments</title>
     </div>
     <router-view/>
   </div>
