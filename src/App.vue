@@ -15,6 +15,7 @@
 html { 
   font-family: 'Inter', sans-serif;
   margin: 10%;
+  overflow-x: hidden;
 }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
