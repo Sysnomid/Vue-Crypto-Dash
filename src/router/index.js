@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Ticker from '../views/Ticker.vue'
 import err from '../views/404.vue'
 import Crypto from '../views/Crypto.vue'
-import Url from '../views/Url.vue'
 
 Vue.use(VueRouter)
 
@@ -17,11 +16,6 @@ const routes = [
     path: "/crypto/assets/:id",
     name: 'Ticker',
     component: Ticker
-  },
-  {
-    path: '/url',
-    name: 'Url Shortener',
-    component: Url
   },
   {
     path: '*',
