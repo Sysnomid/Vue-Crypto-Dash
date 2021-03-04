@@ -50,7 +50,8 @@ export default {
     },
 
     async mounted() {
-        const test = await axios.get(`https://data.messari.io/api/v1/assets/${this.id}/metrics`)
+
+    const test = await axios.get(`https://data.messari.io/api/v1/assets/${this.id}/metrics`)
         .then(response => (response.data))
         .catch(error => {
             console.log(error)
@@ -64,14 +65,16 @@ export default {
 
     methods: {
         convert: function(){
+            const nf = Intl.NumberFormat();
+
             if (!this.reverse){
                 this.CryptoAmt = Math.trunc(Number(this.USD) / Number(this.marketData)*100000)/100000;
             }
 
             else if (this.reverse){
-                this.USD = Math.trunc(Number(this.marketData) * Number(this.CryptoAmt)*100000)/100000;
+                this.USD = nf.format(Math.trunc(Number(this.marketData) * Number(this.CryptoAmt)*100000)/100000);
             }
-       },
+        },
         reversemain: function(){
             if (!this.reverse){ this.reverse = true }
             else if (this.reverse){ this.reverse = false }
