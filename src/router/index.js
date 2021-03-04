@@ -13,7 +13,7 @@ const routes = [
     component: Crypto
   },
   {
-    path: "/crypto/assets/:id",
+    path: "/assets/:id",
     name: 'Ticker',
     component: Ticker
   },

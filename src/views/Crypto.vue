@@ -12,13 +12,13 @@
     <br />
    <div class="spaced">
      <h3>Coins</h3>
-    <a href="/crypto/assets/BTC">BTC</a>
-    <a href="/crypto/assets/ETH">ETH</a>
-    <a href="/crypto/assets/ADA">ADA</a>
-    <a href="/crypto/assets/DOT">DOT</a>
-    <a href="/crypto/assets/LINK">LINK</a>
-    <a href="/crypto/assets/XMR">XMR</a>
-    <a href="/crypto/assets/DOGE">DOGE</a>
+    <a href="/assets/BTC">BTC</a>
+    <a href="/assets/ETH">ETH</a>
+    <a href="/assets/ADA">ADA</a>
+    <a href="/assets/DOT">DOT</a>
+    <a href="/assets/LINK">LINK</a>
+    <a href="/assets/XMR">XMR</a>
+    <a href="/assets/DOGE">DOGE</a>
   </div>
   </div>
 </template>
