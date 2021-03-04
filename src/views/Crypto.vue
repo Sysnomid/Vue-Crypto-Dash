@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     redirect: function () {
-      this.$router.push(`/crypto/assets/${this.ticker}`)
+      this.$router.push(`/assets/${this.ticker}`)
     }
   }
 }
