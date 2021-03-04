@@ -1,13 +1,19 @@
 <template>
   <html id="app" class="darkmode">
     <div id="nav">
-      <a href="/#/crypto"></a>
+      <a href="/crypto"></a>
     </div>
     <router-view/>
     <title>Sysnomid Vue Experiments</title>
     <br />
   </html>
 </template>
+
+<script>
+export default {
+  title: "Sysnomid Crypto Dash"
+}
+</script>
 
 <style>
 @import url('https://rsms.me/inter/inter.css');

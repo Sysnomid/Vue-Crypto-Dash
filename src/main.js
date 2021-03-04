@@ -1,24 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueMeta from 'vue-meta';
+import VueMeta from 'vue-meta'
+import titleMixin from './mixins/titleMixin'
 
-import VueDarkMode from "@growthbunker/vuedarkmode";
-
-Vue.use(VueDarkMode);
-
-Vue.use(VueDarkMode, {
-  // Specify the theme to use: dark or light (dark by default).
-  theme: "dark",
-
-  components: [
-    global
-  ]
-});
-
+Vue.mixin(titleMixin)
 Vue.use(VueMeta);
 
 Vue.config.productionTip = false
+
 
 new Vue({
   router,

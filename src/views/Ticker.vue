@@ -1,19 +1,19 @@
 <template>
     <div>
         <h1 class="title-color">{{name}}</h1>
-        <h1> ${{marketData}} </h1>
+        <h1> ${{ Number(marketData).toLocaleString() }} </h1>
         
-        <p class="green"> 24 Hour High: ${{high}} </p> <p class="red"> 24 Hour Low: ${{low}} </p>
+        <p class="green"> 24 Hour High: ${{ Number(high).toLocaleString() }} </p> <p class="red"> 24 Hour Low: ${{ Number(low).toLocaleString() }} </p>
         
         <br />
 
         <h2>Convert</h2>
 
         <div v-if="!reverse">
-            <h3> ${{USD}} = {{CryptoAmt}} {{name}} </h3>
+            <h3> ${{ Number(USD).toLocaleString() }} = {{ Number(CryptoAmt).toLocaleString() }} {{ name }} </h3>
         </div>
         <div v-if="reverse">
-            <h3> {{CryptoAmt}} {{name}} = ${{USD}} </h3>
+            <h3> {{ Number(CryptoAmt).toLocaleString() }} {{name}} = ${{ Number(USD).toLocaleString() }} </h3>
         </div>
 
        <div v-if="!reverse">
@@ -48,33 +48,31 @@ export default {
             high: ""
         }
     },
-
     async mounted() {
-
-    const test = await axios.get(`https://data.messari.io/api/v1/assets/${this.id}/metrics`)
+        
+    const cryptoData = await axios.get(`https://data.messari.io/api/v1/assets/${this.id}/metrics`)
         .then(response => (response.data))
         .catch(error => {
             console.log(error)
             this.$router.push('/err')
         });
-        this.marketData = Math.trunc(test.data.market_data.price_usd*100000)/100000;
-        this.name = test.data.name
-        this.high = Math.trunc(test.data.market_data.ohlcv_last_24_hour.high*100000)/100000
-        this.low = Math.trunc(test.data.market_data.ohlcv_last_24_hour.low*100000)/100000
+        
+        this.marketData = Math.trunc(cryptoData.data.market_data.price_usd*100000)/100000;
+        this.name = cryptoData.data.name
+        this.high = Math.trunc(cryptoData.data.market_data.ohlcv_last_24_hour.high*100000)/100000;
+        this.low = Math.trunc(cryptoData.data.market_data.ohlcv_last_24_hour.low*100000)/100000;
     },
 
     methods: {
         convert: function(){
-            const nf = Intl.NumberFormat();
-
             if (!this.reverse){
                 this.CryptoAmt = Math.trunc(Number(this.USD) / Number(this.marketData)*100000)/100000;
             }
 
             else if (this.reverse){
-                this.USD = nf.format(Math.trunc(Number(this.marketData) * Number(this.CryptoAmt)*100000)/100000);
+                this.USD = Math.trunc(Number(this.marketData) * Number(this.CryptoAmt)*100000)/100000;
             }
-        },
+       },
         reversemain: function(){
             if (!this.reverse){ this.reverse = true }
             else if (this.reverse){ this.reverse = false }
